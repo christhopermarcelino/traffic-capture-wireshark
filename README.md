@@ -14,6 +14,38 @@ Maka, dengan menginputkan display filter sesuai ip addressnya, yaitu `ip.src == 
 Maka, dengan menginputkan display filter sesuai ip addressnya, yaitu `ip.src == 192.168.1.255`, kita akan memperoleh paket hanya dari ip address 192.168.1.255
 ![image](https://user-images.githubusercontent.com/78243059/158618447-409ca21c-37ea-46af-b6ac-826b9bc69a67.png)
 
+## Soal 2
+```
+Ann adalah seorang tersangka dalam sebuah tindak kejahatan. Setelah bebas dengan uang jaminan, Ann melarikan diri. 
+Polisi mengatakan bahwa kemungkinan besar dia melarikan diri bersama pacarnya. Penyidik telah memonitor lalu lintas jaringan yang digunakan Ann. 
+Dari file soal2.pcap yang merupakan hasil capture lalu lintas jaringan, diharapkan investigator bisa mencari keberadaan Ann.
+
+Cari data sebanyak mungkin berdasar filter di dalam file soal2.pcap
+1. Cari data user berupa email yang ada dalam .pcap
+2. Pada protokol imf terdapat 2 pesan. Cari 2 data pesan tersebut!
+3. Cari data file .docx yang dikirim Ann
+4. Cari lokasi meeting Ann
+```
+**1.** Untuk mencari data yang berkaitan dengan email, kita bisa memanfaatkan keywork gmail, yahoo, atau semacamnya. Di sini, kita akan menggunakan keyword yang lebih umum, yaitu .com sehingga syntax-nya menjadi `tcp contains .com`  
+Akan diperoleh beberapa paket-paket yang mengandung keyword `.com`.  
+![image](https://user-images.githubusercontent.com/78243059/158636448-33c960cb-032f-4081-938b-9249810ba732.png)
+![image](https://user-images.githubusercontent.com/78243059/158636344-35c4fb2f-8ade-460e-aba3-572c863ae57b.png)
+
+Dengan menelusuri paket-paket yang ada, kita memperoleh beberapa email user yang terlibat, yaitu:
+- sneakyg33k@aol.com selaku Ann Dercover
+- mistersecretx@aol.com
+- sec558@gmail.com
+
+**2.** Dua pesan pada protokol IMF bisa didapatkan melalui File > Export Objects > IMF
+Terdapat dua buah file bernama `lunch next week.eml` dan `rendezvous.eml` yang bisa di-save.  
+![image](https://user-images.githubusercontent.com/78243059/158637384-439b561a-cdbe-43b5-9557-7934dfae71ff.png)
+
+**3.** Dua file berekstensi .eml tadi bisa dibuka salah satunya menggunakan Microsoft Outlook. Pada file `rendezvous.eml`, terdapat attachment berupa file `secretrendezvous.docx`.  
+![image](https://user-images.githubusercontent.com/78243059/158637916-0d3f7edb-1683-4902-bbee-1e3863924ed2.png)
+
+**4.** File `secretrendezvous.docx` tadi menyimpan gambar alamat pertemuan Ann, yaitu di Playa del Carmen, Mexico.  
+![image](https://user-images.githubusercontent.com/78243059/158638211-6016190f-e915-4814-9cf4-85ec909b524a.png)
+
 ## Soal 3
 ```
 Buat suatu display filter sehingga wireshark hanya mengambil paket yang mengandung port 21!

@@ -46,6 +46,14 @@ Terdapat dua buah file bernama `lunch next week.eml` dan `rendezvous.eml` yang b
 **4.** File `secretrendezvous.docx` tadi menyimpan gambar alamat pertemuan Ann, yaitu di Playa del Carmen, Mexico.  
 ![image](https://user-images.githubusercontent.com/78243059/158638211-6016190f-e915-4814-9cf4-85ec909b524a.png)
 
+### Informasi Tambahan
+**1.** Dapat diamati bahwa interkasi yang dilakukan Ann menggunakan email. Kita bisa mengamati lebih dalam traffic yang bersangkutan dengan protokol email, yaitu smtp.  
+Menggunakan command `smtp`, kita bisa mendapatkan semua traffic email dan menemukan autentifikasi saat user login. Terlihat datanya sudah dienkripsi, maka kita bisa coba decode base64 dan mendapatkan hasil sebagai berikut:  
+**Username**  : sneakyg33k@aol.com  
+**Password**  : 558r00lz  
+![autentikasi - edit](https://user-images.githubusercontent.com/78243059/158768753-1be2e1e1-f0b9-443e-b246-22d5ac0a8692.png)
+
+
 ## Soal 3
 ```
 Buat suatu display filter sehingga wireshark hanya mengambil paket yang mengandung port 21!

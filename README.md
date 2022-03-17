@@ -60,16 +60,16 @@ Buat suatu display filter sehingga wireshark hanya mengambil paket yang mengandu
 ```
 Tahapan penyelesaiannya dilakukan dalam beberapa langkah sebagai berikut:
 
-**1.** Buka wireshark dan start capturing pada `Adapter for Loopback Traffic Capture` untuk menangkap traffic pada lokal komputer kita.
+**1.** Buka wireshark dan start capturing pada `Adapter for Loopback Traffic Capture` untuk menangkap traffic pada lokal komputer kita.  
 ![image](https://user-images.githubusercontent.com/78243059/158621582-5af468f4-2c68-4be4-91e8-0fd6a6ee38f9.png)
 
-**2.** Start server FileZilla di XAMPP dan connect ke loopback ip address `127.0.0.1`. Lalu, buat user dan pastikan server terbuka untuk port 21
+**2.** Start server FileZilla di XAMPP dan connect ke loopback ip address `127.0.0.1`. Lalu, buat user dan pastikan server terbuka untuk port 21  
 ![image](https://user-images.githubusercontent.com/78243059/158621865-79674fcc-10b4-4581-b540-358d4a7fb948.png)
 
 **3.** Connect ke server menggunakan FilleZilla client pada host 127.0.0.1 dan port 21 berdasarkan user yang sudah dibuat tadi.  
 ![image](https://user-images.githubusercontent.com/78243059/158623267-f5f2026f-b41c-4238-b5a7-6fc83b732d9b.png)
 
-Pastikan sudah mendapat konfirmasi directory listing sukses dan panel kanan aplikasi terisi oleh path folder server kita.
+Pastikan sudah mendapat konfirmasi directory listing sukses dan panel kanan aplikasi terisi oleh path folder server kita.  
 ![image](https://user-images.githubusercontent.com/78243059/158624168-ec5f39d4-f530-4fff-a70d-f7a02e2ae2f2.png)
 
 **4.** Simulasikan transfer file antara client dan server pada FileZilla.  
@@ -85,5 +85,5 @@ Sejak saat kita koneksikan client dengan server, traffic request-nya sudah terca
 Demikian pula saat kita men-transfer file `ncc.txt` dari client ke server, request-nya juga tercatat di Wireshark. Dengan syntax yang sama dengan sebelumnya, kita bisa cari paketnya menggunakan `tcp contains ncc.txt`
 ![image](https://user-images.githubusercontent.com/78243059/158627475-63325a67-3587-47d2-b921-dfe26fbd8c80.png)
 
-Request tersebut mengandung port 21 dibuktikkan dengan membuka detail paket pada section Transmission Control Protocol. Request bisa berasal dari atau menuju ke port 21.
+Request tersebut mengandung port 21 dibuktikan dengan membuka detail paket pada section Transmission Control Protocol. Request bisa berasal dari atau menuju ke port 21.
 ![image](https://user-images.githubusercontent.com/78243059/158628538-67db7857-bfd5-4d93-8595-ab6f8ca2b6a2.png)

@@ -37,8 +37,8 @@ Akan diperoleh beberapa paket-paket yang mengandung keyword `.com`.
 
 Dengan menelusuri paket-paket yang ada, kita memperoleh beberapa email user yang terlibat, yaitu:
 
-- sneakyg33k@aol.com selaku Ann Dercover
-- mistersecretx@aol.com
+- sneakyg33k@aol.com (Ann)
+- mistersecretx@aol.com (pacar Ann)
 - sec558@gmail.com
 
 **2.** Dua pesan pada protokol IMF bisa didapatkan melalui File > Export Objects > IMF. Terdapat dua buah file bernama `lunch next week.eml` dan `rendezvous.eml` yang bisa di-save dan dibuka salah satunya menggunakan Microsoft Outlook.  
